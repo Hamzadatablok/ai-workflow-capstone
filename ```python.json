@@ -1,0 +1,65 @@
+```python
+import pygame
+import sys
+
+# تهيئة Pygame
+pygame.init()
+
+# إعداد الشاشة
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("محاكاة سيارة ذاتية القيادة")
+
+# الألوان
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+
+# إعداد السيارة
+car_width, car_height = 50, 30
+car_x, car_y = WIDTH // 2, HEIGHT - 100
+car_speed = 5
+
+# إعداد الطريق
+road_width = 200
+road_x = (WIDTH - road_width) // 2
+
+# حلقة اللعبة الرئيسية
+clock = pygame.time.Clock()
+running = True
+
+while running:
+    screen.fill(WHITE)
+
+    # رسم الطريق
+    pygame.draw.rect(screen, BLACK, (road_x, 0, road_width, HEIGHT))
+
+    # رسم الخطوط الوسطى للطريق
+    line_width = 10
+    line_height = 50
+    for i in range(0, HEIGHT, line_height * 2):
+        pygame.draw.rect(screen, WHITE, (road_x + road_width // 2 - line_width // 2, i, line_width, line_height))
+
+    # رسم السيارة
+    pygame.draw.rect(screen, RED, (car_x, car_y, car_width, car_height))
+
+    # تحديث موقع السيارة
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT] and car_x > road_x:
+        car_x -= car_speed
+    if keys[pygame.K_RIGHT] and car_x + car_width < road_x + road_width:
+        car_x += car_speed
+
+    # التحقق من الأحداث
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # تحديث الشاشة
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()
+sys.exit()
+```

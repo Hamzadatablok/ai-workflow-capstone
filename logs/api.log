@@ -1,0 +1,42 @@
+2025-08-23 23:36:16,898 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+2025-08-23 23:36:16,898 INFO [33mPress CTRL+C to quit[0m
+2025-08-23 23:36:20,960 INFO 127.0.0.1 - - [23/Aug/2025 23:36:20] "GET /logs HTTP/1.1" 200 -
+2025-08-23 23:36:23,006 ERROR \u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u062a\u0646\u0628\u0624: [Errno 2] No such file or directory: 'data\\final_data.csv'
+2025-08-23 23:36:23,008 INFO 127.0.0.1 - - [23/Aug/2025 23:36:23] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-08-23 23:36:25,069 INFO 127.0.0.1 - - [23/Aug/2025 23:36:25] "[35m[1mGET /scoring HTTP/1.1[0m" 500 -
+2025-08-23 23:36:27,134 ERROR \u062e\u0637\u0623 \u0641\u064a \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u062f\u0631\u064a\u0628: No module named 'src.training'
+2025-08-23 23:36:27,134 INFO 127.0.0.1 - - [23/Aug/2025 23:36:27] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+2025-08-23 23:48:58,213 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+2025-08-23 23:48:58,213 INFO [33mPress CTRL+C to quit[0m
+2025-08-23 23:49:02,052 INFO 127.0.0.1 - - [23/Aug/2025 23:49:02] "GET /logs HTTP/1.1" 200 -
+2025-08-23 23:49:04,104 ERROR \u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u062a\u0646\u0628\u0624: [Errno 2] No such file or directory: 'data\\final_data.csv'
+2025-08-23 23:49:04,105 INFO 127.0.0.1 - - [23/Aug/2025 23:49:04] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-08-23 23:49:06,150 INFO 127.0.0.1 - - [23/Aug/2025 23:49:06] "[35m[1mGET /scoring HTTP/1.1[0m" 500 -
+2025-08-23 23:49:08,191 ERROR \u062e\u0637\u0623 \u0641\u064a \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u062f\u0631\u064a\u0628: No module named 'src.training'
+2025-08-23 23:49:08,191 INFO 127.0.0.1 - - [23/Aug/2025 23:49:08] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+2025-08-23 23:51:30,143 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+2025-08-23 23:51:30,143 INFO [33mPress CTRL+C to quit[0m
+2025-08-23 23:51:34,907 INFO 127.0.0.1 - - [23/Aug/2025 23:51:34] "GET /logs HTTP/1.1" 200 -
+2025-08-23 23:51:36,950 INFO 127.0.0.1 - - [23/Aug/2025 23:51:36] "GET /predict HTTP/1.1" 200 -
+2025-08-23 23:51:38,986 INFO 127.0.0.1 - - [23/Aug/2025 23:51:38] "GET /scoring HTTP/1.1" 200 -
+2025-08-23 23:51:41,035 INFO \u062a\u0645 \u0627\u0633\u062a\u062f\u0639\u0627\u0621 /train \u0628\u0646\u062c\u0627\u062d
+2025-08-23 23:51:41,036 INFO 127.0.0.1 - - [23/Aug/2025 23:51:41] "POST /train HTTP/1.1" 200 -
+2025-08-23 23:54:23,138 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+2025-08-23 23:54:23,138 INFO [33mPress CTRL+C to quit[0m
+2025-08-23 23:54:27,895 INFO 127.0.0.1 - - [23/Aug/2025 23:54:27] "GET /logs HTTP/1.1" 200 -
+2025-08-23 23:54:29,921 INFO 127.0.0.1 - - [23/Aug/2025 23:54:29] "GET /predict HTTP/1.1" 200 -
+2025-08-23 23:54:31,953 INFO 127.0.0.1 - - [23/Aug/2025 23:54:31] "GET /scoring HTTP/1.1" 200 -
+2025-08-23 23:54:34,009 INFO Model retraining triggered
+2025-08-23 23:54:34,010 INFO 127.0.0.1 - - [23/Aug/2025 23:54:34] "POST /train HTTP/1.1" 200 -

@@ -1,0 +1,5 @@
+{
+  "output_model_path": "models",
+  "output_folder_path": "data",
+  "model_name": "trained_model.pkl"
+}
