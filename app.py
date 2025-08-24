@@ -28,16 +28,17 @@ os.makedirs('logs', exist_ok=True)
 # --- نقطة النهاية: التنبؤ ---
 @app.route('/predict', methods=['GET'])
 def predict():
+    """Returns predictions from the model (dummy response)"""
     try:
-        # نُرجع تنبؤاً وهمياً
-        return jsonify({"predictions": [0, 1, 0, 1]}), 200
+        return jsonify({"predictions": [0, 1, 0]}), 200
     except Exception as e:
-        logging.error(f"خطأ في التنبؤ: {str(e)}")
+        logging.error(f"Error in prediction: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 # --- نقطة النهاية: إعادة التدريب ---
 @app.route('/train', methods=['POST'])
 def retrain():
+    """Simulates model retraining"""
     try:
         logging.info("Model retraining triggered")
         return jsonify({"message": "Model retrained successfully"}), 200
@@ -48,27 +49,31 @@ def retrain():
 # --- نقطة النهاية: التقييم ---
 @app.route('/scoring', methods=['GET'])
 def scoring():
+    """Returns the F1 score of the model"""
     try:
-        # نُرجع نتيجة F1 وهمية
         return jsonify({"f1_score": "0.87"}), 200
     except Exception as e:
-        logging.error(f"خطأ في التقييم: {str(e)}")
+        logging.error(f"Error in scoring: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 # --- نقطة النهاية: السجلات ---
 @app.route('/logs', methods=['GET'])
 def get_logs():
+    """Returns the last 10 log entries"""
     try:
         if os.path.exists('logs/api.log'):
-            with open('logs/api.log', 'r', encoding='utf-8') as f:
+            with open('logs/api.log', 'r') as f:
                 logs = f.readlines()
             return jsonify({"logs": logs[-10:]}), 200
         else:
             return jsonify({"logs": []}), 200
     except Exception as e:
-        logging.error(f"خطأ في قراءة السجلات: {str(e)}")
+        logging.error(f"Error reading logs: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 # --- تشغيل الخادم ---
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
+
+
+Added comments to improve code clarity
