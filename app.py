@@ -3,6 +3,15 @@ from flask import Flask, jsonify
 import logging
 import os
 import json
+"""
+AI Workflow Capstone - Model Deployment
+This API handles prediction, retraining, scoring, and logging for a machine learning model.
+Endpoints:
+- /predict: Get predictions
+- /train: Retrain the model
+- /scoring: Get F1 score
+- /logs: View logs
+"""
 
 app = Flask(__name__)
 
